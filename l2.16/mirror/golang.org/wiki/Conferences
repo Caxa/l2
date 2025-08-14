@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script >(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W8MVQXG');</script>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#00add8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="icon" href="/images/favicon-gopher.png" sizes="any">
+<link rel="apple-touch-icon" href="/images/favicon-gopher-plain.png"/>
+<link rel="icon" href="/images/favicon-gopher.svg" type="image/svg+xml">
+<link rel="me" href="https://hachyderm.io/@golang">
+
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W8MVQXG');</script>
+  
+<script src="/js/site.js"></script>
+<meta name="og:url" content="https://go.dev/wiki/Conferences">
+<meta name="og:title" content="Go Wiki: Go Conferences and Major Events - The Go Programming Language">
+<title>Go Wiki: Go Conferences and Major Events - The Go Programming Language</title>
+
+<meta name="og:image" content="https://go.dev/doc/gopher/gopher5logo.jpg">
+<meta name="twitter:image" content="https://go.dev/doc/gopher/gopherbelly300.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@golang">
+</head>
+<body class="Site">
+  
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8MVQXG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+
+
+<header class="Site-header js-siteHeader">
+  <div class="Header Header--dark">
+    <nav class="Header-nav">
+      <a href="/">
+        <img
+          class="js-headerLogo Header-logo"
+          src="/images/go-logo-white.svg"
+          alt="Go">
+      </a>
+      <div class="skip-navigation-wrapper">
+        <a class="skip-to-content-link" aria-label="Skip to main content" href="#main-content"> Skip to Main Content </a>
+      </div>
+      <div class="Header-rightContent">
+        <ul class="Header-menu">
+          <li class="Header-menuItem ">
+            <a href="#"  class="js-desktop-menu-hover" aria-label=Why&#32;Go aria-describedby="dropdown-description">
+              Why Go <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
+            </a>
+            <div class="screen-reader-only" id="dropdown-description" hidden>
+              Press Enter to activate/deactivate dropdown
+            </div>
+              <ul class="Header-submenu js-desktop-submenu-hover" aria-label="submenu">
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/solutions/case-studies">
+                          Case Studies
+                          
+                        </a>
+                    </div>
+                    <p>Common problems companies solve with Go</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/solutions/use-cases">
+                          Use Cases
+                          
+                        </a>
+                    </div>
+                    <p>Stories about how and why companies use Go</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/security/">
+                          Security
+                          
+                        </a>
+                    </div>
+                    <p>How Go can help keep you secure by default</p>
+                  </li>
+              </ul>
+          </li>
+          <li class="Header-menuItem ">
+            <a href="/learn/"  aria-label=Learn aria-describedby="dropdown-description">
+              Learn 
+            </a>
+            <div class="screen-reader-only" id="dropdown-description" hidden>
+              Press Enter to activate/deactivate dropdown
+            </div>
+          </li>
+          <li class="Header-menuItem ">
+            <a href="#"  class="js-desktop-menu-hover" aria-label=Docs aria-describedby="dropdown-description">
+              Docs <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
+            </a>
+            <div class="screen-reader-only" id="dropdown-description" hidden>
+              Press Enter to activate/deactivate dropdown
+            </div>
+              <ul class="Header-submenu js-desktop-submenu-hover" aria-label="submenu">
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/ref/spec">
+                          Go Spec
+                          
+                        </a>
+                    </div>
+                    <p>The official Go language specification</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/doc">
+                          Go User Manual
+                          
+                        </a>
+                    </div>
+                    <p>A complete introduction to building software with Go</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="https://pkg.go.dev/std">
+                          Standard library
+                          
+                        </a>
+                    </div>
+                    <p>Reference documentation for Go&#39;s standard library</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/doc/devel/release">
+                          Release Notes
+                          
+                        </a>
+                    </div>
+                    <p>Learn what&#39;s new in each Go release</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/doc/effective_go">
+                          Effective Go
+                          
+                        </a>
+                    </div>
+                    <p>Tips for writing clear, performant, and idiomatic Go code</p>
+                  </li>
+              </ul>
+          </li>
+          <li class="Header-menuItem ">
+            <a href="https://pkg.go.dev"  aria-label=Packages aria-describedby="dropdown-description">
+              Packages 
+            </a>
+            <div class="screen-reader-only" id="dropdown-description" hidden>
+              Press Enter to activate/deactivate dropdown
+            </div>
+          </li>
+          <li class="Header-menuItem ">
+            <a href="#"  class="js-desktop-menu-hover" aria-label=Community aria-describedby="dropdown-description">
+              Community <i class="material-icons" aria-hidden="true">arrow_drop_down</i>
+            </a>
+            <div class="screen-reader-only" id="dropdown-description" hidden>
+              Press Enter to activate/deactivate dropdown
+            </div>
+              <ul class="Header-submenu js-desktop-submenu-hover" aria-label="submenu">
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/talks/">
+                          Recorded Talks
+                          
+                        </a>
+                    </div>
+                    <p>Videos from prior events</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="https://www.meetup.com/pro/go">
+                          Meetups
+                           <i class="material-icons">open_in_new</i>
+                        </a>
+                    </div>
+                    <p>Meet other local Go developers</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/wiki/Conferences">
+                          Conferences
+                           <i class="material-icons">open_in_new</i>
+                        </a>
+                    </div>
+                    <p>Learn and network with Go developers from around the world</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/blog">
+                          Go blog
+                          
+                        </a>
+                    </div>
+                    <p>The Go project&#39;s official blog.</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        <a href="/help">
+                          Go project
+                          
+                        </a>
+                    </div>
+                    <p>Get help and stay informed from Go</p>
+                  </li>
+                  <li class="Header-submenuItem">
+                    <div>
+                        Get connected
+                    </div>
+                    <p></p>
+                      <div class="Header-socialIcons">
+                        
+                        <a class="Header-socialIcon" aria-label="Get connected with google-groups (Opens in new window)" href="https://groups.google.com/g/golang-nuts"><img src="/images/logos/social/google-groups.svg" /></a>
+                        <a class="Header-socialIcon" aria-label="Get connected with github (Opens in new window)" href="https://github.com/golang"><img src="/images/logos/social/github.svg" /></a>
+                        <a class="Header-socialIcon" aria-label="Get connected with twitter (Opens in new window)" href="https://twitter.com/golang"><img src="/images/logos/social/twitter.svg" /></a>
+                        <a class="Header-socialIcon" aria-label="Get connected with reddit (Opens in new window)" href="https://www.reddit.com/r/golang/"><img src="/images/logos/social/reddit.svg" /></a>
+                        <a class="Header-socialIcon" aria-label="Get connected with slack (Opens in new window)" href="https://invite.slack.golangbridge.org/"><img src="/images/logos/social/slack.svg" /></a>
+                        <a class="Header-socialIcon" aria-label="Get connected with stack-overflow (Opens in new window)" href="https://stackoverflow.com/tags/go"><img src="/images/logos/social/stack-overflow.svg" /></a>
+                      </div>
+                  </li>
+              </ul>
+          </li>
+        </ul>
+        <button class="Header-navOpen js-headerMenuButton Header-navOpen--white" aria-label="Open navigation.">
+        </button>
+      </div>
+    </nav>
+    
+  </div>
+</header>
+<aside class="NavigationDrawer js-header">
+  <nav class="NavigationDrawer-nav">
+    <div class="NavigationDrawer-header">
+      <a href="/">
+        <img class="NavigationDrawer-logo" src="/images/go-logo-blue.svg" alt="Go.">
+      </a>
+    </div>
+    <ul class="NavigationDrawer-list">
+        
+          <li class="NavigationDrawer-listItem js-mobile-subnav-trigger  NavigationDrawer-hasSubnav">
+            <a href="#"><span>Why Go</span> <i class="material-icons">navigate_next</i></a>
+
+            <div class="NavigationDrawer NavigationDrawer-submenuItem">
+              <nav class="NavigationDrawer-nav">
+                <div class="NavigationDrawer-header">
+                  <a href="#"><i class="material-icons">navigate_before</i>Why Go</a>
+                </div>
+                <ul class="NavigationDrawer-list">
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/solutions/case-studies">
+                          Case Studies
+                          
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/solutions/use-cases">
+                          Use Cases
+                          
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/security/">
+                          Security
+                          
+                        </a>
+                      
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+        
+        
+          <li class="NavigationDrawer-listItem ">
+            <a href="/learn/">Learn</a>
+          </li>
+        
+        
+          <li class="NavigationDrawer-listItem js-mobile-subnav-trigger  NavigationDrawer-hasSubnav">
+            <a href="#"><span>Docs</span> <i class="material-icons">navigate_next</i></a>
+
+            <div class="NavigationDrawer NavigationDrawer-submenuItem">
+              <nav class="NavigationDrawer-nav">
+                <div class="NavigationDrawer-header">
+                  <a href="#"><i class="material-icons">navigate_before</i>Docs</a>
+                </div>
+                <ul class="NavigationDrawer-list">
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/ref/spec">
+                          Go Spec
+                          
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/doc">
+                          Go User Manual
+                          
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <a href="https://pkg.go.dev/std">
+                          Standard library
+                          
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/doc/devel/release">
+                          Release Notes
+                          
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/doc/effective_go">
+                          Effective Go
+                          
+                        </a>
+                      
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+        
+        
+          <li class="NavigationDrawer-listItem ">
+            <a href="https://pkg.go.dev">Packages</a>
+          </li>
+        
+        
+          <li class="NavigationDrawer-listItem js-mobile-subnav-trigger  NavigationDrawer-hasSubnav">
+            <a href="#"><span>Community</span> <i class="material-icons">navigate_next</i></a>
+
+            <div class="NavigationDrawer NavigationDrawer-submenuItem">
+              <nav class="NavigationDrawer-nav">
+                <div class="NavigationDrawer-header">
+                  <a href="#"><i class="material-icons">navigate_before</i>Community</a>
+                </div>
+                <ul class="NavigationDrawer-list">
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/talks/">
+                          Recorded Talks
+                          
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <a href="https://www.meetup.com/pro/go">
+                          Meetups
+                           <i class="material-icons">open_in_new</i>
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/wiki/Conferences">
+                          Conferences
+                           <i class="material-icons">open_in_new</i>
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/blog">
+                          Go blog
+                          
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <a href="/help">
+                          Go project
+                          
+                        </a>
+                      
+                    </li>
+                    <li class="NavigationDrawer-listItem">
+                        <div>Get connected</div>
+                        <div class="Header-socialIcons">
+                          
+                            <a class="Header-socialIcon" href="https://groups.google.com/g/golang-nuts"><img src="/images/logos/social/google-groups.svg" /></a>
+                            <a class="Header-socialIcon" href="https://github.com/golang"><img src="/images/logos/social/github.svg" /></a>
+                            <a class="Header-socialIcon" href="https://twitter.com/golang"><img src="/images/logos/social/twitter.svg" /></a>
+                            <a class="Header-socialIcon" href="https://www.reddit.com/r/golang/"><img src="/images/logos/social/reddit.svg" /></a>
+                            <a class="Header-socialIcon" href="https://invite.slack.golangbridge.org/"><img src="/images/logos/social/slack.svg" /></a>
+                            <a class="Header-socialIcon" href="https://stackoverflow.com/tags/go"><img src="/images/logos/social/stack-overflow.svg" /></a>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+        
+    </ul>
+  </nav>
+</aside>
+<div class="NavigationDrawer-scrim js-scrim" role="presentation"></div>
+<main class="SiteContent SiteContent--default" id="main-content">
+  
+
+
+<article class="Doc Article">
+
+
+
+
+
+<h1>Go Wiki: Go Conferences and Major Events</h1>
+
+
+
+
+
+
+<div id="nav" class="TOC"></div>
+
+
+
+<div class='markdown'>
+<h2 id="upcoming">Upcoming</h2>
+<p>Please keep all items in chronological order.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Date</th>
+<th>Location</th>
+<th>Website</th>
+<th>CFP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GopherCon Europe</td>
+<td>2025-06-16-19</td>
+<td>Berlin, Germany</td>
+<td><a href="https://gophercon.eu/" rel="noreferrer" target="_blank">https://gophercon.eu/</a></td>
+<td><a href="https://forms.gle/t1aS1H8fChdVgYbR9" rel="noreferrer" target="_blank">https://forms.gle/t1aS1H8fChdVgYbR9</a></td>
+</tr>
+<tr>
+<td>Go South Africa</td>
+<td>2025-08-06-07</td>
+<td>Online</td>
+<td><a href="https://gopherconf.co.za/" rel="noreferrer" target="_blank">https://gopherconf.co.za/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>GopherCon UK</td>
+<td>2025-08-13-15</td>
+<td>London, UK</td>
+<td><a href="https://www.gophercon.co.uk/" rel="noreferrer" target="_blank">https://www.gophercon.co.uk/</a></td>
+<td><a href="https://www.gophercon.co.uk/call-for-papers" rel="noreferrer" target="_blank">https://www.gophercon.co.uk/call-for-papers</a></td>
+</tr>
+<tr>
+<td>GopherCon</td>
+<td>2025-08-26-28</td>
+<td>New York City, NY USA</td>
+<td><a href="https://www.gophercon.com/" rel="noreferrer" target="_blank">https://www.gophercon.com/</a></td>
+<td><a href="https://sessionize.com/gophercon-2025/" rel="noreferrer" target="_blank">https://sessionize.com/gophercon-2025/</a></td>
+</tr>
+<tr>
+<td>GopherCon India</td>
+<td>2025-09-14-15</td>
+<td>Jaipur, India</td>
+<td><a href="https://gopherconindia.org/" rel="noreferrer" target="_blank">https://gopherconindia.org/</a></td>
+<td><a href="https://www.papercall.io/gophercon-india-2025" rel="noreferrer" target="_blank">https://www.papercall.io/gophercon-india-2025</a></td>
+</tr>
+<tr>
+<td>Golab</td>
+<td>2025-10-05-07</td>
+<td>Florence, Italy</td>
+<td><a href="https://golab.io" rel="noreferrer" target="_blank">https://golab.io</a></td>
+<td></td>
+</tr>
+<tr>
+<td>GoWest</td>
+<td>2025-10-24</td>
+<td>Lehi, Utah, USA</td>
+<td><a href="https://www.gowestconf.com/" rel="noreferrer" target="_blank">https://www.gowestconf.com/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Gophercon Africa</td>
+<td>2025-10-24-25</td>
+<td>Lagos, Nigeria</td>
+<td><a href="https://www.gophers.africa/" rel="noreferrer" target="_blank">https://www.gophers.africa/</a></td>
+<td><a href="https://www.gophers.africa/call-for-speakers" rel="noreferrer" target="_blank">https://www.gophers.africa/call-for-speakers</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="archives">Archives</h2>
+<p>Please keep all items in reverse chronological order (most recent first)</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Date</th>
+<th>Location</th>
+<th>Talk, Video Archives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FOSDEM</td>
+<td>2025-02-01-02</td>
+<td>Brussels, Belgium</td>
+<td><a href="https://fosdem.org/2025/" rel="noreferrer" target="_blank">https://fosdem.org/2025/</a></td>
+</tr>
+<tr>
+<td>GoKonf Istanbul</td>
+<td>2024-11-23</td>
+<td>Istanbul, Türkiye</td>
+<td><a href="https://gokonf.com/" rel="noreferrer" target="_blank">https://gokonf.com/</a></td>
+</tr>
+<tr>
+<td>Golab</td>
+<td>2024-11-11-13</td>
+<td>Florence, Italy</td>
+<td><a href="https://golab.io" rel="noreferrer" target="_blank">https://golab.io</a></td>
+</tr>
+<tr>
+<td>GopherCon Israel</td>
+<td>2024-09-09</td>
+<td>Tel Aviv, Israel</td>
+<td><a href="https://www.gophercon.org.il/" rel="noreferrer" target="_blank">https://www.gophercon.org.il/</a></td>
+</tr>
+<tr>
+<td>GopherCon UK</td>
+<td>2024-08-14-16</td>
+<td>London, UK</td>
+<td><a href="https://www.gophercon.co.uk/" rel="noreferrer" target="_blank">https://www.gophercon.co.uk/</a></td>
+</tr>
+<tr>
+<td>GopherCon</td>
+<td>2024-07-07-10</td>
+<td>Chicago, IL USA</td>
+<td><a href="https://www.gophercon.com/" rel="noreferrer" target="_blank">https://www.gophercon.com/</a></td>
+</tr>
+<tr>
+<td>Golang Conf</td>
+<td>2024-06-24-25</td>
+<td>St. Petersburg, Russia</td>
+<td><a href="https://golangconf.ru/" rel="noreferrer" target="_blank">https://golangconf.ru/</a></td>
+</tr>
+<tr>
+<td>GopherCon EU, Berlin</td>
+<td>2024-06-17-20</td>
+<td>Berlin, Germany</td>
+<td><a href="https://gophercon.eu/" rel="noreferrer" target="_blank">https://gophercon.eu/</a></td>
+</tr>
+<tr>
+<td>Go Conference Japan</td>
+<td>2024-06-08</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.jp" rel="noreferrer" target="_blank">https://gocon.jp</a></td>
+</tr>
+<tr>
+<td>GopherDay Taiwan</td>
+<td>2024-05-25</td>
+<td>Taipei, Taiwan</td>
+<td><a href="https://gopherday.golang.tw/2024/" rel="noreferrer" target="_blank">https://gopherday.golang.tw/2024/</a></td>
+</tr>
+<tr>
+<td>GopherCon Brazil</td>
+<td>2024-05-09-10</td>
+<td>Florianópolis, SC, Brazil</td>
+<td><a href="https://gopherconbr.org/en/" rel="noreferrer" target="_blank">https://gopherconbr.org/en/</a></td>
+</tr>
+<tr>
+<td>Conf42 Golang</td>
+<td>2024-04-25</td>
+<td>Online</td>
+<td><a href="https://www.conf42.com/golang2024" rel="noreferrer" target="_blank">https://www.conf42.com/golang2024</a></td>
+</tr>
+<tr>
+<td>GopherCon EU, Athens</td>
+<td>2024-02-06-08</td>
+<td>Athens, Greece</td>
+<td><a href="https://gophercon.eu/" rel="noreferrer" target="_blank">https://gophercon.eu/</a></td>
+</tr>
+<tr>
+<td>FOSDEM</td>
+<td>2024-02-03-04</td>
+<td>Brussels, Belgium</td>
+<td><a href="https://fosdem.org/2024/" rel="noreferrer" target="_blank">https://fosdem.org/2024/</a></td>
+</tr>
+<tr>
+<td>GoLab</td>
+<td>2023-11-19-21</td>
+<td>Florence, Italy</td>
+<td><a href="https://golab.io" rel="noreferrer" target="_blank">https://golab.io</a></td>
+</tr>
+<tr>
+<td>GopherChina</td>
+<td>2023-11-19</td>
+<td>ShangHai, China</td>
+<td><a href="http://gopherchina2023sh.bagevent.com" rel="noreferrer" target="_blank">http://gopherchina2023sh.bagevent.com</a></td>
+</tr>
+<tr>
+<td>GopherCon AU 2023</td>
+<td>2023-11-08-10</td>
+<td>Sydney, Australia</td>
+<td><a href="https://gophercon.com.au/" rel="noreferrer" target="_blank">https://gophercon.com.au/</a></td>
+</tr>
+<tr>
+<td>Fyne Conf 2023</td>
+<td>2023-11-03</td>
+<td>Edinburgh, UK</td>
+<td><a href="https://conf.fyne.io" rel="noreferrer" target="_blank">https://conf.fyne.io</a></td>
+</tr>
+<tr>
+<td>GopherCon Singapore 2023</td>
+<td>2023-11-02-03</td>
+<td>Singapore</td>
+<td><a href="https://2023.gophercon.sg" rel="noreferrer" target="_blank">https://2023.gophercon.sg</a></td>
+</tr>
+<tr>
+<td>GoWest</td>
+<td>2023-10-27</td>
+<td>Lehi, Utah, USA</td>
+<td><a href="https://www.gowestconf.com/" rel="noreferrer" target="_blank">https://www.gowestconf.com/</a></td>
+</tr>
+<tr>
+<td>GopherCon</td>
+<td>2023-09-26-29</td>
+<td>San Diego</td>
+<td><a href="https://www.gophercon.com/" rel="noreferrer" target="_blank">https://www.gophercon.com/</a></td>
+</tr>
+<tr>
+<td>GopherCon India</td>
+<td>2023-09-09-10</td>
+<td>Pune, India</td>
+<td><a href="https://gopherconindia.org" rel="noreferrer" target="_blank">https://gopherconindia.org</a></td>
+</tr>
+<tr>
+<td>GopherCon UK</td>
+<td>2023-08-16-18</td>
+<td>London, UK</td>
+<td><a href="https://www.gophercon.co.uk/" rel="noreferrer" target="_blank">https://www.gophercon.co.uk/</a></td>
+</tr>
+<tr>
+<td>GopherCon Korea</td>
+<td>2023-08-05-06</td>
+<td>Seoul, Korea</td>
+<td><a href="https://festa.io/events/3435" rel="noreferrer" target="_blank">https://festa.io/events/3435</a></td>
+</tr>
+<tr>
+<td>GopherCon Europe 2023</td>
+<td>2023-06-26-29</td>
+<td>Berlin, Germany</td>
+<td><a href="https://gophercon.eu/" rel="noreferrer" target="_blank">https://gophercon.eu/</a>, <a href="https://www.youtube.com/playlist?list=PLtoVuM73AmsJWvXYd_9rbYXcbv1UdzeLT" rel="noreferrer" target="_blank">https://www.youtube.com/playlist?list=PLtoVuM73AmsJWvXYd_9rbYXcbv1UdzeLT</a></td>
+</tr>
+<tr>
+<td>GopherChina</td>
+<td>2023-06-09-11</td>
+<td>Beijing, China</td>
+<td><a href="https://www.bagevent.com/event/8057917" rel="noreferrer" target="_blank">https://www.bagevent.com/event/8057917</a></td>
+</tr>
+<tr>
+<td>GothamGo</td>
+<td>2023-06-09</td>
+<td>New York City</td>
+<td><a href="https://gothamgo.com/" rel="noreferrer" target="_blank">https://gothamgo.com/</a></td>
+</tr>
+<tr>
+<td>Go Conference 2023</td>
+<td>2023-06-02</td>
+<td>Online</td>
+<td><a href="https://gocon.jp/2023/" rel="noreferrer" target="_blank">https://gocon.jp/2023/</a> (talks coming soon)</td>
+</tr>
+<tr>
+<td>Conf42: Golang 2023</td>
+<td>2023-04-20</td>
+<td>Online</td>
+<td><a href="https://www.conf42.com/golang2023" rel="noreferrer" target="_blank">https://www.conf42.com/golang2023</a>, <a href="https://www.youtube.com/playlist?list=PLIuxSyKxlQrBDOCy9ThDZ0kJX7skLE2ks" rel="noreferrer" target="_blank">https://www.youtube.com/playlist?list=PLIuxSyKxlQrBDOCy9ThDZ0kJX7skLE2ks</a></td>
+</tr>
+<tr>
+<td>GopherCon Israel 2023</td>
+<td>2023-02-07</td>
+<td>Tel Aviv, Israel</td>
+<td><a href="https://www.gophercon.org.il" rel="noreferrer" target="_blank">https://www.gophercon.org.il</a></td>
+</tr>
+<tr>
+<td>Go Devroom FOSDEM</td>
+<td>2023-02-04</td>
+<td>Brussels, Belgium</td>
+<td><a href="https://fosdem.org/2023/schedule/track/go/" rel="noreferrer" target="_blank">https://fosdem.org/2023/schedule/track/go/</a></td>
+</tr>
+<tr>
+<td>GoWest Conference 2022</td>
+<td>2022-10-21</td>
+<td>Online/ Salt Lake City, Ut USA</td>
+<td><a href="https://gowestconf.com" rel="noreferrer" target="_blank">https://gowestconf.com</a></td>
+</tr>
+<tr>
+<td>GopherCon</td>
+<td>2022-10-06-08</td>
+<td>Chicago</td>
+<td><a href="https://www.gophercon.com/" rel="noreferrer" target="_blank">https://www.gophercon.com/</a></td>
+</tr>
+<tr>
+<td>GopherCon India 2022</td>
+<td>2022-08-28</td>
+<td>Pune, India</td>
+<td><a href="https://gopherconindia.org" rel="noreferrer" target="_blank">https://gopherconindia.org</a></td>
+</tr>
+<tr>
+<td>GopherCon Europe 2022</td>
+<td>2022-07-28-31</td>
+<td>Berlin, Germany</td>
+<td><a href="https://gophercon.eu/" rel="noreferrer" target="_blank">https://gophercon.eu/</a></td>
+</tr>
+<tr>
+<td>GopherCon</td>
+<td>2021-12-05-08</td>
+<td>San Diego &amp; Online</td>
+<td><a href="https://www.gophercon.com/" rel="noreferrer" target="_blank">https://www.gophercon.com/</a></td>
+</tr>
+<tr>
+<td>GoWest Conference 2021</td>
+<td>2021-10-22</td>
+<td>Online/ Salt Lake City, Ut USA</td>
+<td><a href="https://gowestconf.com" rel="noreferrer" target="_blank">https://gowestconf.com</a></td>
+</tr>
+<tr>
+<td>GopherCon Europe</td>
+<td>2021-05-26-28</td>
+<td>Online</td>
+<td><a href="https://gophercon.eu" rel="noreferrer" target="_blank">https://gophercon.eu</a></td>
+</tr>
+<tr>
+<td>O&rsquo;Reilly OSS Superstream: Go</td>
+<td>2021-04-29</td>
+<td>Online</td>
+<td><a href="https://learning.oreilly.com/attend/open-source-software-superstream-series-gogenerics-extensibility-and-the-future-of-go-in-open-source-programming/0636920053215/0636920053214" rel="noreferrer" target="_blank">website</a></td>
+</tr>
+<tr>
+<td>GopherCon Russia 2021 Online</td>
+<td>2021-04-23-25</td>
+<td>Online</td>
+<td><a href="https://www.gophercon-russia.ru/en" rel="noreferrer" target="_blank">https://www.gophercon-russia.ru/en</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2020</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GopherCon Singapore 2020</td>
+<td>tbd due to COVID-19</td>
+<td>Singapore</td>
+<td><a href="https://2020.gophercon.sg/" rel="noreferrer" target="_blank">https://2020.gophercon.sg/</a> <br> CFP: <a href="https://www.papercall.io/gopherconsg-2020" rel="noreferrer" target="_blank">https://www.papercall.io/gopherconsg-2020</a></td>
+</tr>
+<tr>
+<td>GopherConIndia 2020</td>
+<td>tbd due to COVID-19</td>
+<td>Goa, India</td>
+<td><a href="https://gopherconindia.com/" rel="noreferrer" target="_blank">https://gopherconindia.com/</a> <br> CFP: <a href="https://www.papercall.io/gci20" rel="noreferrer" target="_blank">https://www.papercall.io/gci20</a></td>
+</tr>
+<tr>
+<td>All Systems Go</td>
+<td>2020-12-03</td>
+<td>Online</td>
+<td><a href="https://allsystemsgo.space" rel="noreferrer" target="_blank">https://allsystemsgo.space</a></td>
+</tr>
+<tr>
+<td>GopherChina 2020</td>
+<td>2020-11-21/22</td>
+<td>ShangHai, China</td>
+<td><a href="https://www.gopherchina.org" rel="noreferrer" target="_blank">https://www.gopherchina.org</a></td>
+</tr>
+<tr>
+<td>GoLab 2020</td>
+<td>2020-10-19-25</td>
+<td>Online</td>
+<td><a href="https://golab.io" rel="noreferrer" target="_blank">https://golab.io</a></td>
+</tr>
+<tr>
+<td>Go West Online</td>
+<td>2020-10-02</td>
+<td>Online</td>
+<td><a href="https://www.gowestconf.com/" rel="noreferrer" target="_blank">https://www.gowestconf.com/</a></td>
+</tr>
+<tr>
+<td>~GopherCon UK~</td>
+<td>~2020-08-21-23~</td>
+<td>~London, UK~</td>
+<td><a href="https://www.gophercon.co.uk/" rel="noreferrer" target="_blank">https://www.gophercon.co.uk/</a> <br> CANCELLED DUE TO COVID-19</td>
+</tr>
+<tr>
+<td>GopherCon Russia 2020/2 Online</td>
+<td>2020-08-08-09</td>
+<td>Moscow, Russia</td>
+<td><a href="https://www.gophercon-russia.ru/en" rel="noreferrer" target="_blank">https://www.gophercon-russia.ru/en</a></td>
+</tr>
+<tr>
+<td>GopherCon Turkey (Online)</td>
+<td>2020-07-25</td>
+<td>Istanbul, Turkey</td>
+<td><a href="https://gophercon.ist/" rel="noreferrer" target="_blank">https://gophercon.ist/</a></td>
+</tr>
+<tr>
+<td>GopherCon Europe</td>
+<td>2020-07</td>
+<td>Berlin, Germany</td>
+<td><a href="https://gophercon.berlin/" rel="noreferrer" target="_blank">https://gophercon.berlin/</a></td>
+</tr>
+<tr>
+<td>GopherCon Africa 2020</td>
+<td>2020-07-14-16</td>
+<td>Lagos, Nigeria</td>
+<td><a href="https://www.gophercon.africa/" rel="noreferrer" target="_blank">https://www.gophercon.africa/</a></td>
+</tr>
+<tr>
+<td>GoWayFest 4.0 (online edition)</td>
+<td>2020-07-11-12</td>
+<td>Minsk, Belarus</td>
+<td><a href="https://goway.io" rel="noreferrer" target="_blank">https://goway.io</a> <br> CFP: <a href="https://www.papercall.io/gowayfest4" rel="noreferrer" target="_blank">https://www.papercall.io/gowayfest4</a></td>
+</tr>
+<tr>
+<td>GoCon Sendai</td>
+<td>2020-07-04</td>
+<td>Sendai, Japan</td>
+<td><a href="http://sendai.gocon.jp/" rel="noreferrer" target="_blank">http://sendai.gocon.jp/</a></td>
+</tr>
+<tr>
+<td>~GoCon Canada~</td>
+<td>~2020-05-25-26~</td>
+<td>~Toronto, Canada~</td>
+<td><a href="https://gocon.ca" rel="noreferrer" target="_blank">https://gocon.ca</a> <br> CANCELLED DUE TO COVID-19</td>
+</tr>
+<tr>
+<td>GoWest</td>
+<td>2020-05-08</td>
+<td>Salt Lake City, UT USA</td>
+<td><a href="https://gowestconf.com" rel="noreferrer" target="_blank">https://gowestconf.com</a> CFP: <a href="https://www.papercall.io/gowestconf" rel="noreferrer" target="_blank">https://www.papercall.io/gowestconf</a></td>
+</tr>
+<tr>
+<td>GoRemoteFest</td>
+<td>2020-04-26</td>
+<td><a href="https://www.youtube.com/channel/UCUZnOzWTIeDU8kel4eNNUNw" rel="noreferrer" target="_blank">Online</a></td>
+<td><a href="https://www.goremotefest.com" rel="noreferrer" target="_blank">https://www.goremotefest.com</a></td>
+</tr>
+<tr>
+<td>~~EU Go Contributor Summit~~</td>
+<td>~~2020-04-23~~</td>
+<td>~~Berlin, Germany~~</td>
+<td>CANCELLED DUE TO COVID-19 COVID-19 CORONAVIRUS</td>
+</tr>
+<tr>
+<td>~~dotGo~~</td>
+<td>~~2020-03-30~~</td>
+<td>~~Paris, France~~</td>
+<td><a href="https://2020.dotgo.eu/" rel="noreferrer" target="_blank">https://2020.dotgo.eu/</a> <br> CANCELLED DUE TO COVID-19 COVID-19 CORONAVIRUS</td>
+</tr>
+<tr>
+<td>GopherCon Russia 2020 Online</td>
+<td>2020-03-28</td>
+<td>Moscow, Russia</td>
+<td><a href="https://www.gophercon-russia.ru/en" rel="noreferrer" target="_blank">https://www.gophercon-russia.ru/en</a></td>
+</tr>
+<tr>
+<td>~~Capital Go 2020~~</td>
+<td>~~2020-03-26-27~~</td>
+<td>~~McLean, Virginia USA~~</td>
+<td><a href="http://capitalgolang.com" rel="noreferrer" target="_blank">http://capitalgolang.com</a> <br> CANCELLED DUE TO COVID-19 CORONAVIRUS</td>
+</tr>
+<tr>
+<td>GopherCon Israel</td>
+<td>2020-02-03</td>
+<td>Tel Aviv, Israel</td>
+<td><a href="https://www.gophercon.org.il/" rel="noreferrer" target="_blank">https://www.gophercon.org.il/</a></td>
+</tr>
+<tr>
+<td>Go Devroom FOSDEM</td>
+<td>2020-02-02</td>
+<td>Brussels, Belgium</td>
+<td><a href="https://fosdem.org/2020/schedule/track/go/" rel="noreferrer" target="_blank">https://fosdem.org/2020/schedule/track/go/</a></td>
+</tr>
+<tr>
+<td>GoDays</td>
+<td>2020-01-21-23</td>
+<td>Berlin, Germany</td>
+<td><a href="https://www.godays.io/" rel="noreferrer" target="_blank">https://www.godays.io/</a> CFP: <a href="https://www.godays.io/cfp" rel="noreferrer" target="_blank">https://www.godays.io/cfp</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2019</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Gopherpalooza</td>
+<td>2019-11-07-08</td>
+<td>Mountain View, CA USA</td>
+<td><a href="http://gopherpalooza.com/" rel="noreferrer" target="_blank">http://gopherpalooza.com/</a></td>
+</tr>
+<tr>
+<td>GopherCon Vietnam 2019</td>
+<td>2019-11-02</td>
+<td>Ho Chi Minh City, Vietnam</td>
+<td><a href="https://gophercon.vn" rel="noreferrer" target="_blank">https://gophercon.vn</a></td>
+</tr>
+<tr>
+<td>Golang Piter</td>
+<td>2019-11-01</td>
+<td>St. Petersburg, Russia</td>
+<td><a href="https://golangpiter.com" rel="noreferrer" target="_blank">https://golangpiter.com</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2019-10-28</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.jp/" rel="noreferrer" target="_blank">https://gocon.jp/</a></td>
+</tr>
+<tr>
+<td>GoLab 2019</td>
+<td>2019-10-20-22</td>
+<td>Florence, Italy</td>
+<td><a href="https://golab.io" rel="noreferrer" target="_blank">https://golab.io</a></td>
+</tr>
+<tr>
+<td>GolangConf 2019</td>
+<td>2019-10-07</td>
+<td>Moscow, Russia</td>
+<td>CfP: <a href="https://www.papercall.io/golangconf" rel="noreferrer" target="_blank">https://www.papercall.io/golangconf</a></td>
+</tr>
+<tr>
+<td>GopherConBR 2019</td>
+<td>2019-09-27-28</td>
+<td>Florianópolis, Brazil</td>
+<td><a href="http://2019.gopherconbr.org" rel="noreferrer" target="_blank">http://2019.gopherconbr.org</a></td>
+</tr>
+<tr>
+<td>OpenGo 2019</td>
+<td>2019-09-23-25</td>
+<td>Hollywood, FL USA</td>
+<td><a href="https://opengo.io/" rel="noreferrer" target="_blank">https://opengo.io/</a></td>
+</tr>
+<tr>
+<td>GopherCon UK</td>
+<td>2019-08-21-23</td>
+<td>London, UK</td>
+<td><a href="https://www.gophercon.co.uk/" rel="noreferrer" target="_blank">https://www.gophercon.co.uk/</a></td>
+</tr>
+<tr>
+<td>GopherCon 2019</td>
+<td>2019-07-24-27</td>
+<td>San Diego, CA USA</td>
+<td><a href="https://www.gophercon.com/" rel="noreferrer" target="_blank">https://www.gophercon.com/</a></td>
+</tr>
+<tr>
+<td>GopherShip</td>
+<td>2019-07-20</td>
+<td>Moscow, Russia</td>
+<td><a href="https://gophership.ru" rel="noreferrer" target="_blank">https://gophership.ru</a></td>
+</tr>
+<tr>
+<td>Go Conference &lsquo;19 Summer in Fukuoka</td>
+<td>2019-07-13</td>
+<td>Fukuoka, Japan</td>
+<td><a href="https://fukuoka.gocon.jp/" rel="noreferrer" target="_blank">https://fukuoka.gocon.jp/</a></td>
+</tr>
+<tr>
+<td>GoWayFest 3.0</td>
+<td>2019-07-05</td>
+<td>Minsk, Belarus</td>
+<td><a href="https://goway.io" rel="noreferrer" target="_blank">https://goway.io</a> <br> CFP: <a href="https://www.papercall.io/gowayfest3" rel="noreferrer" target="_blank">https://www.papercall.io/gowayfest3</a></td>
+</tr>
+<tr>
+<td>Gophercon Poland</td>
+<td>2019-06-27</td>
+<td>Gdansk, Poland</td>
+<td><a href="https://twitter.com/GopherConPL" rel="noreferrer" target="_blank">https://twitter.com/GopherConPL</a> <br> CFP: <a href="https://eventil.com/events/GopherConPL/cfp" rel="noreferrer" target="_blank">https://eventil.com/events/GopherConPL/cfp</a></td>
+</tr>
+<tr>
+<td>GoGoConf</td>
+<td>2019-06-14</td>
+<td>Krakow, Poland</td>
+<td><a href="https://www.gogoconf.rocks" rel="noreferrer" target="_blank">https://www.gogoconf.rocks</a> <br> CFP: <a href="https://www.papercall.io/gogoconf" rel="noreferrer" target="_blank">https://www.papercall.io/gogoconf</a></td>
+</tr>
+<tr>
+<td>GopherCon Europe</td>
+<td>2019-06-01-05-30</td>
+<td>Tenerife, Canary Islands, Spain</td>
+<td><a href="https://www.gophercon.es" rel="noreferrer" target="_blank">https://www.gophercon.es</a> <br> CFP: <a href="https://www.papercall.io/gophercon-eu-2019" rel="noreferrer" target="_blank">https://www.papercall.io/gophercon-eu-2019</a></td>
+</tr>
+<tr>
+<td>GoCon Canada</td>
+<td>2019-05-31</td>
+<td>Toronto, Canada</td>
+<td><a href="https://gocon.ca" rel="noreferrer" target="_blank">https://gocon.ca</a><br> CFP: <a href="https://www.papercall.io/goconca" rel="noreferrer" target="_blank">https://www.papercall.io/goconca</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2019-05-18</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.jp/" rel="noreferrer" target="_blank">https://gocon.jp/</a><br> CFP: <a href="https://www.papercall.io/gocon-tokyo-2019" rel="noreferrer" target="_blank">https://www.papercall.io/gocon-tokyo-2019</a></td>
+</tr>
+<tr>
+<td>GopherCon Singapore 2019</td>
+<td>2019-05-03</td>
+<td>Singapore</td>
+<td><a href="https://2019.gophercon.sg/" rel="noreferrer" target="_blank">https://2019.gophercon.sg/</a><br>CFP: <a href="https://www.papercall.io/gopherconsg2019" rel="noreferrer" target="_blank">https://www.papercall.io/gopherconsg2019</a></td>
+</tr>
+<tr>
+<td>GopherChina 2019</td>
+<td>2019-04-27</td>
+<td>China BeiJing</td>
+<td><a href="https://gopherchina.org/" rel="noreferrer" target="_blank">https://gopherchina.org/</a></td>
+</tr>
+<tr>
+<td>GopherCon Russia</td>
+<td>2019-04-13</td>
+<td>Moscow, Russia</td>
+<td><a href="https://www.gophercon-russia.ru/en" rel="noreferrer" target="_blank">https://www.gophercon-russia.ru/en</a></td>
+</tr>
+<tr>
+<td>GothamGo</td>
+<td>2019-04-12</td>
+<td>New York City, NY USA</td>
+<td><a href="http://gothamgo.com/" rel="noreferrer" target="_blank">http://gothamgo.com/</a><br>CFP <a href="https://www.papercall.io/gothamgo2019" rel="noreferrer" target="_blank">https://www.papercall.io/gothamgo2019</a></td>
+</tr>
+<tr>
+<td>CodeFest X</td>
+<td>2019-03-30-31</td>
+<td>Novosibirsk, Russia</td>
+<td></td>
+</tr>
+<tr>
+<td>dotGo 2019</td>
+<td>2019-03-25</td>
+<td>Paris, France</td>
+<td><a href="https://2019.dotgo.eu/" rel="noreferrer" target="_blank">https://2019.dotgo.eu/</a></td>
+</tr>
+<tr>
+<td>GopherCon Israel</td>
+<td>2019-02-11</td>
+<td>Tel Aviv, Israel</td>
+<td><a href="https://www.gophercon.org.il/" rel="noreferrer" target="_blank">https://www.gophercon.org.il/</a></td>
+</tr>
+<tr>
+<td>Go Devroom FOSDEM</td>
+<td>2019-02-02</td>
+<td>Brussels, Belgium</td>
+<td><a href="https://fosdem.org/2019/schedule/track/go/" rel="noreferrer" target="_blank">https://fosdem.org/2019/schedule/track/go/</a></td>
+</tr>
+<tr>
+<td>GoDays</td>
+<td>2019-01-30</td>
+<td>Berlin, Germany</td>
+<td><a href="https://www.godays.io/" rel="noreferrer" target="_blank">https://www.godays.io/</a></td>
+</tr>
+<tr>
+<td>GopherCon India 2019</td>
+<td>2019-01-18-19</td>
+<td>Goa, India</td>
+<td><a href="https://gopherconindia.com/" rel="noreferrer" target="_blank">https://gopherconindia.com/</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2018</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GopherCon Vietnam 2018</td>
+<td>2018-12-08</td>
+<td>Ho Chi Minh City, Vietnam</td>
+<td><a href="http://gophercon.vn" rel="noreferrer" target="_blank">http://gophercon.vn</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2018-11-25</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.connpass.com/event/109368/" rel="noreferrer" target="_blank">https://gocon.connpass.com/event/109368/</a></td>
+</tr>
+<tr>
+<td>GoGoConf</td>
+<td>2018-10-25</td>
+<td>Krakow, Poland</td>
+<td><a href="https://www.gogoconf.rocks" rel="noreferrer" target="_blank">https://www.gogoconf.rocks</a></td>
+</tr>
+<tr>
+<td>GoLab 2018</td>
+<td>2018-10-22-23</td>
+<td>Florence, Italy</td>
+<td><a href="https://golab.io" rel="noreferrer" target="_blank">https://golab.io</a></td>
+</tr>
+<tr>
+<td>Gopherpalooza 2018</td>
+<td>2018-10-12</td>
+<td>San Francisco, CA</td>
+<td><a href="http://gopherpalooza.com/" rel="noreferrer" target="_blank">http://gopherpalooza.com/</a></td>
+</tr>
+<tr>
+<td>Go Stockholm Conference</td>
+<td>2018-10-06</td>
+<td>Stockholm, Sweden</td>
+<td><a href="https://www.eventbrite.com/e/go-stockholm-conference-tickets-49325007425" rel="noreferrer" target="_blank">https://www.eventbrite.com/e/go-stockholm-conference-tickets-49325007425</a></td>
+</tr>
+<tr>
+<td>GoWayFest 2.0</td>
+<td>2018-09-28</td>
+<td>Minsk, Belarus</td>
+<td><a href="https://goway.io" rel="noreferrer" target="_blank">https://goway.io</a></td>
+</tr>
+<tr>
+<td>GopherCon Brasil 2018</td>
+<td>2018-09-27-29</td>
+<td>Florianópolis, Brazil</td>
+<td><a href="https://2018.gopherconbr.org/en" rel="noreferrer" target="_blank">https://2018.gopherconbr.org/en</a><br>CFP <a href="https://www.papercall.io/gopherconbrasil2018" rel="noreferrer" target="_blank">https://www.papercall.io/gopherconbrasil2018</a></td>
+</tr>
+<tr>
+<td>GopherCon Denver 2018</td>
+<td>2018-08-27-30</td>
+<td>Denver, CO</td>
+<td><a href="https://www.gophercon.com/" rel="noreferrer" target="_blank">https://www.gophercon.com/</a><br>Talks: <a href="https://www.youtube.com/playlist?list=PL2ntRZ1ySWBdatAqf-2_125H4sGzaWngM" rel="noreferrer" target="_blank">https://www.youtube.com/playlist?list=PL2ntRZ1ySWBdatAqf-2_125H4sGzaWngM</a><br>Lightning Talks: <a href="https://www.youtube.com/playlist?list=PL2ntRZ1ySWBdMEZScpaoRX-vyt6pRUvfM" rel="noreferrer" target="_blank">https://www.youtube.com/playlist?list=PL2ntRZ1ySWBdMEZScpaoRX-vyt6pRUvfM</a></td>
+</tr>
+<tr>
+<td>GopherCon UK 2018</td>
+<td>2018-08-01-03</td>
+<td>London, UK</td>
+<td><a href="https://www.gophercon.co.uk/" rel="noreferrer" target="_blank">https://www.gophercon.co.uk/</a></td>
+</tr>
+<tr>
+<td>Go Northwest 2018</td>
+<td>2018-07-30</td>
+<td>Seattle, WA, USA</td>
+<td><a href="http://gonorthwest.io/" rel="noreferrer" target="_blank">http://gonorthwest.io/</a></td>
+</tr>
+<tr>
+<td>GopherCon Europe - Iceland</td>
+<td>2018-06-01-02</td>
+<td>Reykjavik, Iceland</td>
+<td><a href="https://www.youtube.com/playlist?list=PLtoVuM73AmsJuBoOoI-12WR36nhvtlJ-A&amp;disable_polymer=true" rel="noreferrer" target="_blank">Talks</a><br><a href="https://gophercon.is" rel="noreferrer" target="_blank">Website</a></td>
+</tr>
+<tr>
+<td>GopherCon SG 2018</td>
+<td>2018-05-04</td>
+<td>Singapore</td>
+<td><a href="https://2018.gophercon.sg/" rel="noreferrer" target="_blank">https://2018.gophercon.sg/</a></td>
+</tr>
+<tr>
+<td>GothamGo 2018</td>
+<td>2018-04-27</td>
+<td>New York, USA</td>
+<td><a href="http://gothamgo.com/" rel="noreferrer" target="_blank">http://gothamgo.com/</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2018-04-15</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.connpass.com/event/82515/" rel="noreferrer" target="_blank">https://gocon.connpass.com/event/82515/</a></td>
+</tr>
+<tr>
+<td>GopherCon China 2018</td>
+<td>2018-04-14-15</td>
+<td>Shanghai, China</td>
+<td><a href="http://www.gopherchina.org/" rel="noreferrer" target="_blank">http://www.gopherchina.org/</a></td>
+</tr>
+<tr>
+<td>GopherCon Russia 2018</td>
+<td>2018-03-17</td>
+<td>Moscow, Russia</td>
+<td><a href="http://gophercon-russia.ru/en" rel="noreferrer" target="_blank">http://gophercon-russia.ru/en</a><br><a href="https://github.com/GopherConRu/talks" rel="noreferrer" target="_blank">https://github.com/GopherConRu/talks</a></td>
+</tr>
+<tr>
+<td>GopherCon India 2018</td>
+<td>2018-03-09-10</td>
+<td>Pune, India</td>
+<td><a href="http://www.gophercon.in/" rel="noreferrer" target="_blank">http://www.gophercon.in/</a></td>
+</tr>
+<tr>
+<td>Go Devroom FOSDEM 2018</td>
+<td>2018-02-03-04</td>
+<td>Brussels, Belgium</td>
+<td><a href="https://fosdem.org/2018/schedule/track/go/" rel="noreferrer" target="_blank">https://fosdem.org/2018/schedule/track/go/</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2017</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GopherCon Brasil 2017</td>
+<td>2017-11-17-19</td>
+<td>Florianópolis, Brazil</td>
+<td><a href="https://2017.gopherconbr.org/en" rel="noreferrer" target="_blank">https://2017.gopherconbr.org/en</a></td>
+</tr>
+<tr>
+<td>dotGo</td>
+<td>2017-11-06</td>
+<td>Paris, France</td>
+<td><a href="https://www.dotgo.eu" rel="noreferrer" target="_blank">https://www.dotgo.eu</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2017-11-05</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.connpass.com/event/66615/" rel="noreferrer" target="_blank">https://gocon.connpass.com/event/66615/</a></td>
+</tr>
+<tr>
+<td>GothamGo</td>
+<td>2017-10-05-06</td>
+<td>New York, USA</td>
+<td><a href="http://gothamgo.com/" rel="noreferrer" target="_blank">http://gothamgo.com/</a></td>
+</tr>
+<tr>
+<td>Golang UK</td>
+<td>2017-08-16-18</td>
+<td>London, UK</td>
+<td><a href="https://golanguk.com" rel="noreferrer" target="_blank">https://golanguk.com</a></td>
+</tr>
+<tr>
+<td>GopherCon Denver</td>
+<td>2017-07-12-15</td>
+<td>Denver, CO</td>
+<td><a href="http://gophercon.com" rel="noreferrer" target="_blank">http://gophercon.com</a></td>
+</tr>
+<tr>
+<td>GopherCon Singapore 2017</td>
+<td>2017-05-25-26</td>
+<td>Singapore</td>
+<td><a href="https://2017.gophercon.sg" rel="noreferrer" target="_blank">https://2017.gophercon.sg</a></td>
+</tr>
+<tr>
+<td>Capital Go Language Conference</td>
+<td>2017-04-24-25</td>
+<td>Washington, DC</td>
+<td><a href="http://www.capitalgolang.com/" rel="noreferrer" target="_blank">http://www.capitalgolang.com/</a></td>
+</tr>
+<tr>
+<td>GopherChina 2017</td>
+<td>2017-04-15-16</td>
+<td>Shanghai</td>
+<td><a href="http://www.bagevent.com/event/357764" rel="noreferrer" target="_blank">http://www.bagevent.com/event/357764</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2017-03-25</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.connpass.com/event/52441/" rel="noreferrer" target="_blank">https://gocon.connpass.com/event/52441/</a></td>
+</tr>
+<tr>
+<td>GopherCon India 2017</td>
+<td>2017-02-24-25</td>
+<td>Pune, India</td>
+<td><a href="http://www.gophercon.in/" rel="noreferrer" target="_blank">http://www.gophercon.in/</a></td>
+</tr>
+<tr>
+<td>Go Devroom FOSDEM</td>
+<td>2017-02-05</td>
+<td>Brussels, Belgium</td>
+<td><a href="https://fosdem.org/2017/schedule/track/go/" rel="noreferrer" target="_blank">https://fosdem.org/2017/schedule/track/go/</a></td>
+</tr>
+<tr>
+<td>GoLab</td>
+<td>2017-01-20-21</td>
+<td>Florence, Italy</td>
+<td><a href="http://golab.io" rel="noreferrer" target="_blank">http://golab.io</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2016</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GothamGo</td>
+<td>2016-11-18</td>
+<td>New York, USA</td>
+<td><a href="http://gothamgo.com/" rel="noreferrer" target="_blank">http://gothamgo.com/</a></td>
+</tr>
+<tr>
+<td>GopherCon Brasil</td>
+<td>2016-11-04-05</td>
+<td>Florianópolis, Brazil</td>
+<td><a href="https://2016.gopherconbr.org/en/" rel="noreferrer" target="_blank">https://2016.gopherconbr.org/en/</a></td>
+</tr>
+<tr>
+<td>dotGo</td>
+<td>2016-10-10</td>
+<td>Paris, France</td>
+<td><a href="http://2016.dotgo.eu" rel="noreferrer" target="_blank">http://2016.dotgo.eu</a></td>
+</tr>
+<tr>
+<td>Golang UK</td>
+<td>2016-08-18</td>
+<td>London, UK</td>
+<td><a href="http://golanguk.com" rel="noreferrer" target="_blank">http://golanguk.com</a></td>
+</tr>
+<tr>
+<td>GopherCon Denver</td>
+<td>2016-07-11</td>
+<td>Denver, CO</td>
+<td><a href="http://gophercon.com" rel="noreferrer" target="_blank">http://gophercon.com</a></td>
+</tr>
+<tr>
+<td>Gopherfest</td>
+<td>2016-05-16</td>
+<td>San Francisco, USA</td>
+<td><a href="http://www.gopherfest.org/" rel="noreferrer" target="_blank">http://www.gopherfest.org/</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2016-04-23</td>
+<td>Tokyo, Japan</td>
+<td><a href="http://gocon.connpass.com/event/27521/" rel="noreferrer" target="_blank">http://gocon.connpass.com/event/27521/</a></td>
+</tr>
+<tr>
+<td>Gopher China</td>
+<td>2016-04-16</td>
+<td>Beijing, China</td>
+<td><a href="http://www.gopherchina.org" rel="noreferrer" target="_blank">http://www.gopherchina.org</a></td>
+</tr>
+<tr>
+<td>GopherCon Dubai</td>
+<td>2016-02-23</td>
+<td>Dubai, UAE</td>
+<td><a href="http://www.gophercon.ae" rel="noreferrer" target="_blank">http://www.gophercon.ae</a></td>
+</tr>
+<tr>
+<td>GopherCon India</td>
+<td>2016-02-19</td>
+<td>Bengaluru, India</td>
+<td><a href="https://www.youtube.com/watch?v=4Dr8FXs9aJM&amp;list=PLxFC1MYuNgJT_ynbXGuYAZbSnUnq-6VQA" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>FOSDEM</td>
+<td>2016-01-30</td>
+<td>Brussels, Belgium</td>
+<td><a href="https://video.fosdem.org/2016/h1302/" rel="noreferrer" target="_blank">https://video.fosdem.org/2016/h1302/</a></td>
+</tr>
+<tr>
+<td>Gopher Gala</td>
+<td>2016-01-22</td>
+<td>Earth</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2015</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GoLab</td>
+<td>2015-12-15</td>
+<td>Florence, Italy</td>
+<td><a href="http://golab.io" rel="noreferrer" target="_blank">http://golab.io</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2015-12-06</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.connpass.com/event/22930/" rel="noreferrer" target="_blank">https://gocon.connpass.com/event/22930/</a></td>
+</tr>
+<tr>
+<td>GopherFest SV</td>
+<td>2015-11-18</td>
+<td>Facebook, Menlo Park, CA</td>
+<td><a href="https://www.youtube.com/playlist?list=PLtLJO5JKE5YALxdnGgvgwxTSmANOvyAo9" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>dotGo</td>
+<td>2015-11-09</td>
+<td>Paris, France</td>
+<td><a href="https://www.youtube.com/playlist?list=PLMWwKlp9xoYX4mlNDdkCOfsUG_40WCMCX" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>GothamGo</td>
+<td>2015-10-02</td>
+<td>NY, NY</td>
+<td><a href="https://www.youtube.com/playlist?list=PLeGxIOPLk9ELh9tsPZMzau6CzMjfMzp9-" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>GolangUK</td>
+<td>2015-08-21</td>
+<td>London, UK</td>
+<td><a href="https://www.youtube.com/playlist?list=PLDWZ5uzn69ezRJYeWxYNRMYebvf8DerHd" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>GopherCon Denver</td>
+<td>2015-07-07</td>
+<td>Denver, CO</td>
+<td><a href="https://www.youtube.com/playlist?list=PL2ntRZ1ySWBf-_z-gHCOR2N156Nw930Hm" rel="noreferrer" target="_blank">keynotes</a>, <a href="https://www.youtube.com/playlist?list=PL2ntRZ1ySWBeHqlHM8DmvS8axgbrpvF9b" rel="noreferrer" target="_blank">lightning</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2015-06-20</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.connpass.com/event/14063/" rel="noreferrer" target="_blank">https://gocon.connpass.com/event/14063/</a></td>
+</tr>
+<tr>
+<td>GopherfestSF</td>
+<td>2015-06-25</td>
+<td>San Francisco, CA</td>
+<td><a href="https://www.youtube.com/playlist?list=PLtLJO5JKE5YB55ExLApKU0S8_eN5eaGkU" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>GopherCon India</td>
+<td>2015-03-17</td>
+<td>Bengaluru, India</td>
+<td><a href="https://www.youtube.com/playlist?list=PLxFC1MYuNgJTY3uQ5Ja4F5Sz305nnrBOq" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>Go Devroom FOSDEM</td>
+<td>2015-03-04</td>
+<td>Brussels, Belgium</td>
+<td><a href="https://www.youtube.com/playlist?list=PLtLJO5JKE5YDK74RZm67xfwaDgeCj7oqb" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>Gopher China</td>
+<td>2015-04-25</td>
+<td>Shanghai, China</td>
+<td></td>
+</tr>
+<tr>
+<td>London Go Gathering</td>
+<td>2015-02-03</td>
+<td>London, UK</td>
+<td><a href="https://www.youtube.com/playlist?list=PLtLJO5JKE5YCZYDAt8-uyJbVgq1FIUpVM" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2014</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2014-11-30</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.connpass.com/event/9748/" rel="noreferrer" target="_blank">https://gocon.connpass.com/event/9748/</a></td>
+</tr>
+<tr>
+<td>GothamGo</td>
+<td>2014-11-15</td>
+<td>NYC, NY</td>
+<td><a href="https://vimeo.com/channels/852217" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>dotGo</td>
+<td>2014-09-10</td>
+<td>Paris, France</td>
+<td><a href="https://www.youtube.com/playlist?list=PLMW8Xq7bXrG58Qk-9QSy2HRh2WVeIrs7e" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>Go Devroom FOSDEM</td>
+<td>2014-06-30</td>
+<td>Brussels, Belgium</td>
+<td><a href="https://www.youtube.com/playlist?list=PLtLJO5JKE5YDKG4WcaNts3IVZqhDmmuBH" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2014-05-31</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.connpass.com/event/6370/" rel="noreferrer" target="_blank">https://gocon.connpass.com/event/6370/</a></td>
+</tr>
+<tr>
+<td>GopherCon Denver</td>
+<td>2014-04-24</td>
+<td>Denver, CO</td>
+<td><a href="https://www.youtube.com/playlist?list=PL2ntRZ1ySWBcD_BiJiDJUcyrb2w3bTulF" rel="noreferrer" target="_blank">videos</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2013</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2013-10-14</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.connpass.com/event/3510/" rel="noreferrer" target="_blank">https://gocon.connpass.com/event/3510/</a></td>
+</tr>
+<tr>
+<td>Go Conference Tokyo</td>
+<td>2013-04-13</td>
+<td>Tokyo, Japan</td>
+<td><a href="https://gocon.connpass.com/event/1906/" rel="noreferrer" target="_blank">https://gocon.connpass.com/event/1906/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+<hr>
+<p>
+<i>This content is part of the <a href="/wiki/">Go Wiki</a>.</i>
+</p>
+
+
+
+</article>
+
+
+
+</main>
+<footer class="Site-footer">
+  <div class="Footer">
+    <div class="Container">
+      <div class="Footer-links">
+          <div class="Footer-linkColumn">
+            <a href="/solutions/" class="Footer-link Footer-link--primary" aria-describedby="footer-description">
+              Why Go
+            </a>
+              <a href="/solutions/use-cases" class="Footer-link" aria-describedby="footer-description">
+                Use Cases
+              </a>
+              <a href="/solutions/case-studies" class="Footer-link" aria-describedby="footer-description">
+                Case Studies
+              </a>
+          </div>
+          <div class="Footer-linkColumn">
+            <a href="/learn/" class="Footer-link Footer-link--primary" aria-describedby="footer-description">
+              Get Started
+            </a>
+              <a href="/play" class="Footer-link" aria-describedby="footer-description">
+                Playground
+              </a>
+              <a href="/tour/" class="Footer-link" aria-describedby="footer-description">
+                Tour
+              </a>
+              <a href="https://stackoverflow.com/questions/tagged/go?tab=Newest" class="Footer-link" aria-describedby="footer-description">
+                Stack Overflow
+              </a>
+              <a href="/help/" class="Footer-link" aria-describedby="footer-description">
+                Help
+              </a>
+          </div>
+          <div class="Footer-linkColumn">
+            <a href="https://pkg.go.dev" class="Footer-link Footer-link--primary" aria-describedby="footer-description">
+              Packages
+            </a>
+              <a href="/pkg/" class="Footer-link" aria-describedby="footer-description">
+                Standard Library
+              </a>
+              <a href="https://pkg.go.dev/about" class="Footer-link" aria-describedby="footer-description">
+                About Go Packages
+              </a>
+          </div>
+          <div class="Footer-linkColumn">
+            <a href="/project" class="Footer-link Footer-link--primary" aria-describedby="footer-description">
+              About
+            </a>
+              <a href="/dl/" class="Footer-link" aria-describedby="footer-description">
+                Download
+              </a>
+              <a href="/blog/" class="Footer-link" aria-describedby="footer-description">
+                Blog
+              </a>
+              <a href="https://github.com/golang/go/issues" class="Footer-link" aria-describedby="footer-description">
+                Issue Tracker
+              </a>
+              <a href="/doc/devel/release" class="Footer-link" aria-describedby="footer-description">
+                Release Notes
+              </a>
+              <a href="/brand" class="Footer-link" aria-describedby="footer-description">
+                Brand Guidelines
+              </a>
+              <a href="/conduct" class="Footer-link" aria-describedby="footer-description">
+                Code of Conduct
+              </a>
+          </div>
+          <div class="Footer-linkColumn">
+            <a href="https://www.twitter.com/golang" class="Footer-link Footer-link--primary" aria-describedby="footer-description">
+              Connect
+            </a>
+              <a href="https://www.twitter.com/golang" class="Footer-link" aria-describedby="footer-description">
+                Twitter
+              </a>
+              <a href="https://github.com/golang" class="Footer-link" aria-describedby="footer-description">
+                GitHub
+              </a>
+              <a href="https://invite.slack.golangbridge.org/" class="Footer-link" aria-describedby="footer-description">
+                Slack
+              </a>
+              <a href="https://reddit.com/r/golang" class="Footer-link" aria-describedby="footer-description">
+                r/golang
+              </a>
+              <a href="https://www.meetup.com/pro/go" class="Footer-link" aria-describedby="footer-description">
+                Meetup
+              </a>
+              <a href="https://golangweekly.com/" class="Footer-link" aria-describedby="footer-description">
+                Golang Weekly
+              </a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="screen-reader-only" id="footer-description" hidden>
+          Opens in new window.
+  </div>
+  <div class="Footer">
+    <div class="Container Container--fullBleed">
+      <div class="Footer-bottom">
+        <img class="Footer-gopher" src="/images/gophers/pilot-bust.svg" alt="The Go Gopher">
+        <ul class="Footer-listRow">
+          <li class="Footer-listItem">
+            <a href="/copyright" aria-describedby="footer-description">Copyright</a>
+          </li>
+          <li class="Footer-listItem">
+            <a href="/tos" aria-describedby="footer-description">Terms of Service</a>
+          </li>
+          <li class="Footer-listItem">
+            <a href="http://www.google.com/intl/en/policies/privacy/" aria-describedby="footer-description"
+              target="_blank"
+              rel="noopener">
+              Privacy Policy
+            </a>
+            </li>
+          <li class="Footer-listItem">
+            <a
+              href="/s/website-issue" aria-describedby="footer-description"
+              target="_blank"
+              rel="noopener"
+              >
+              Report an Issue
+            </a>
+          </li>
+          <li class="Footer-listItem go-Footer-listItem">
+            <button class="go-Button go-Button--text go-Footer-toggleTheme js-toggleTheme" aria-label="Toggle theme">
+              <img
+                data-value="auto"
+                class="go-Icon go-Icon--inverted"
+                height="24"
+                width="24"
+                src="/images/icons/brightness_6_gm_grey_24dp.svg"
+                alt="System theme">
+              <img
+                data-value="dark"
+                class="go-Icon go-Icon--inverted"
+                height="24"
+                width="24"
+                src="/images/icons/brightness_2_gm_grey_24dp.svg"
+                alt="Dark theme">
+              <img
+                data-value="light"
+                class="go-Icon go-Icon--inverted"
+                height="24"
+                width="24"
+                src="/images/icons/light_mode_gm_grey_24dp.svg"
+                alt="Light theme">
+            </button>
+          </li>
+        </ul>
+        <a class="Footer-googleLogo" target="_blank" href="https://google.com" rel="noopener">
+          <img class="Footer-googleLogoImg" src="/images/google-white.png" alt="Google logo">
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/carousels.js"></script>
+  <script src="/js/searchBox.js"></script>
+  <script src="/js/misc.js"></script>
+  <script src="/js/hats.js"></script>
+  <script src="/js/playground.js"></script>
+  <script src="/js/godocs.js"></script>
+  <script async src="/js/copypaste.js"></script>
+</footer>
+<section class="Cookie-notice js-cookieNotice">
+  <div>go.dev uses cookies from Google to deliver and enhance the quality of its services and to
+  analyze traffic. <a target=_blank href="https://policies.google.com/technologies/cookies">Learn more.</a></div>
+  <div><button class="go-Button">Okay</button></div>
+</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
