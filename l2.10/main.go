@@ -28,7 +28,6 @@ func main() {
 	outputLines(lines, config)
 }
 
-// parseFlags парсит флаги командной строки
 func parseFlags() Config {
 	var config Config
 	flag.IntVar(&config.keyColumn, "k", 0, "сортировать по столбцу (колонке) №N")

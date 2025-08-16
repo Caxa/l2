@@ -1,6 +1,3 @@
-//go:build unix
-// +build unix
-
 package main
 
 import (
@@ -19,8 +16,8 @@ import (
 
 type cmdUnit struct {
 	argv    []string
-	inFile  string // "< file"
-	outFile string // "> file" (truncate)
+	inFile  string
+	outFile string
 }
 
 type pipeline struct {
@@ -29,27 +26,23 @@ type pipeline struct {
 
 type seqItem struct {
 	pl pipeline
-	op string // "", "&&", "||"  (op is operator that follows this item)
+	op string
 }
 
-// global state to send SIGINT to running pipeline
-var currentPGID int // 0 means idle
+var currentPGID int
 
 func main() {
 	fmt.Println("mini$hell (Ctrl+D = exit, Ctrl+C = interrupt job)")
 	reader := bufio.NewScanner(os.Stdin)
 
-	// handle Ctrl+C: do not exit the shell, just interrupt current job group
 	sigc := make(chan os.Signal, 1)
 	signal.Notify(sigc, os.Interrupt)
 	go func() {
 		for range sigc {
 			pgid := currentPGID
 			if pgid != 0 {
-				// send SIGINT to the whole process group
 				_ = syscall.Kill(-pgid, syscall.SIGINT)
 			} else {
-				// nothing is running; print a fresh prompt line
 				fmt.Println()
 				printPrompt()
 			}
@@ -59,7 +52,6 @@ func main() {
 	printPrompt()
 	for {
 		if !reader.Scan() {
-			// EOF (Ctrl+D)
 			fmt.Println()
 			return
 		}
@@ -69,7 +61,7 @@ func main() {
 			printPrompt()
 			continue
 		}
-		// env substitution (very simple): $VAR -> os.Getenv(VAR)
+
 		line = os.ExpandEnv(line)
 
 		items, err := parseSequence(line)
@@ -81,15 +73,14 @@ func main() {
 
 		lastOK := true
 		for i, item := range items {
-			// short-circuit for && / ||
+
 			if i > 0 {
 				prevOp := items[i-1].op
 				if prevOp == "&&" && !lastOK {
-					// skip
+
 					continue
 				}
 				if prevOp == "||" && lastOK {
-					// skip
 					continue
 				}
 			}
@@ -108,10 +99,7 @@ func printPrompt() {
 	fmt.Printf("%s$ ", filepath.Base(wd))
 }
 
-// ---------- Parsing ----------
-
 func parseSequence(line string) ([]seqItem, error) {
-	// insert spaces around operators | < > && ||
 	replacer := strings.NewReplacer(
 		"&&", " && ",
 		"||", " || ",
@@ -126,7 +114,6 @@ func parseSequence(line string) ([]seqItem, error) {
 		return nil, nil
 	}
 
-	// split by && and || into pipelines
 	var items []seqItem
 	var cur []string
 	var ops []string
@@ -159,7 +146,7 @@ func parseSequence(line string) ([]seqItem, error) {
 func parsePipelineTokens(toks []string) (pipeline, error) {
 	var cmds []cmdUnit
 	var cur cmdUnit
-	expectFile := "" // "in" or "out"
+	expectFile := ""
 	for i := 0; i < len(toks); i++ {
 		t := toks[i]
 		switch t {
@@ -195,7 +182,6 @@ func parsePipelineTokens(toks []string) (pipeline, error) {
 	return pipeline{cmds: cmds}, nil
 }
 
-// Splits by spaces but keeps quoted chunks "like this" or 'like this'
 func fieldsRespectQuotes(s string) []string {
 	var out []string
 	var cur strings.Builder
@@ -239,23 +225,17 @@ func fieldsRespectQuotes(s string) []string {
 	return out
 }
 
-// ---------- Execution ----------
-
 func runPipeline(pl pipeline) (bool, error) {
-	// Builtins are handled only when there's a single command and it is a builtin.
-	// This keeps pipeline execution simpler and satisfies the task requirements.
 	if len(pl.cmds) == 1 {
 		if isBuiltin(pl.cmds[0].argv) {
 			return runBuiltin(pl.cmds[0])
 		}
 	}
 
-	// Build the pipeline of external commands
 	n := len(pl.cmds)
 	cmds := make([]*exec.Cmd, n)
 	filesToClose := []io.Closer{}
 
-	// Create pipes between commands
 	var prevR *os.File
 	for i := 0; i < n; i++ {
 		cu := pl.cmds[i]
@@ -267,10 +247,8 @@ func runPipeline(pl pipeline) (bool, error) {
 			return false, errors.New("empty command")
 		}
 		cmd := exec.Command(cu.argv[0], cu.argv[1:]...)
-		// set new process group so we can send SIGINT to entire pipeline
 		cmd.SysProcAttr = &syscall.SysProcAttr{Setpgid: true}
 
-		// stdin
 		if i == 0 {
 			if cu.inFile != "" {
 				f, err := os.Open(cu.inFile)
@@ -290,7 +268,6 @@ func runPipeline(pl pipeline) (bool, error) {
 			cmd.Stdin = prevR
 		}
 
-		// stdout
 		if i == n-1 {
 			if cu.outFile != "" {
 				f, err := os.Create(cu.outFile)
@@ -316,7 +293,6 @@ func runPipeline(pl pipeline) (bool, error) {
 				return false, err
 			}
 			cmd.Stdout = pw
-			// next command will read from pr
 			prevR = pr
 			filesToClose = append(filesToClose, pw)
 		}
@@ -325,25 +301,19 @@ func runPipeline(pl pipeline) (bool, error) {
 		cmds[i] = cmd
 	}
 
-	// Start all
 	for i, c := range cmds {
 		if err := c.Start(); err != nil {
 			closeMany(filesToClose)
 			return false, err
 		}
-		// set the global PGID from the first started process
 		if i == 0 {
 			pgid, _ := syscall.Getpgid(c.Process.Pid)
 			currentPGID = pgid
 		}
-		// close writer ends in parent as soon as possible
-		// (those were collected in filesToClose)
 	}
 
-	// parent must close any write-ends to avoid deadlocks
 	closeMany(filesToClose)
 
-	// Wait for all, capture last exit status
 	var lastStatus int
 	var waitErr error
 	for _, c := range cmds {
@@ -357,7 +327,6 @@ func runPipeline(pl pipeline) (bool, error) {
 				lastStatus = 1
 			}
 		} else {
-			// success
 			lastStatus = 0
 		}
 	}
@@ -370,8 +339,6 @@ func closeMany(cs []io.Closer) {
 		_ = c.Close()
 	}
 }
-
-// ---------- Builtins ----------
 
 func isBuiltin(argv []string) bool {
 	if len(argv) == 0 {
@@ -426,7 +393,6 @@ func runBuiltin(cu cmdUnit) (bool, error) {
 		}
 		return true, nil
 	case "ps":
-		// minimal cross-unix: just delegate to system ps
 		cmd := exec.Command("ps", "aux")
 		cmd.Stdin = os.Stdin
 		if cu.outFile != "" {

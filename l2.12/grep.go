@@ -33,13 +33,11 @@ func main() {
 		filename = args[1]
 	}
 
-	// -C N эквивалентно -A N -B N
 	if *context > 0 {
 		*after = *context
 		*before = *context
 	}
 
-	// Подготовка поиска
 	if *ignoreCase {
 		pattern = "(?i)" + pattern
 	}
@@ -54,7 +52,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Чтение входного потока
 	var reader io.Reader
 	if filename != "" {
 		file, err := os.Open(filename)
@@ -78,7 +75,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Поиск
 	matched := make([]bool, len(lines))
 	for i, line := range lines {
 		match := re.MatchString(line)
@@ -90,7 +86,6 @@ func main() {
 		}
 	}
 
-	// Если -c — только количество
 	if *count {
 		cnt := 0
 		for _, m := range matched {
@@ -102,7 +97,6 @@ func main() {
 		return
 	}
 
-	// Вывод с контекстом
 	printed := make([]bool, len(lines))
 	for i := 0; i < len(lines); i++ {
 		if matched[i] {

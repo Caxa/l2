@@ -5,7 +5,6 @@ import (
 	"time"
 )
 
-// or объединяет несколько done-каналов в один
 func or(channels ...<-chan interface{}) <-chan interface{} {
 	switch len(channels) {
 	case 0:

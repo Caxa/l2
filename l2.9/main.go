@@ -6,7 +6,6 @@ import (
 	"unicode"
 )
 
-// распавоука
 func Unpack(example string) (string, error) {
 	var result []rune
 	runes := []rune(example)
@@ -14,7 +13,6 @@ func Unpack(example string) (string, error) {
 
 	for i := 0; i < length; i++ {
 		current := runes[i]
-		// два слеша
 		if current == '\\' {
 			if i+1 < length {
 				result = append(result, runes[1+1])
@@ -23,7 +21,6 @@ func Unpack(example string) (string, error) {
 			}
 			return "", errors.New("некоректная строка: escape символ без следующего символ")
 		}
-		//цифры
 		if unicode.IsDigit(current) {
 			if i == 0 {
 				return "", errors.New("некоректная строка: строка начинается с цифры")

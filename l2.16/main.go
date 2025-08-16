@@ -28,7 +28,7 @@ var (
 	}
 	domain      string
 	basePath    = "mirror"
-	maxFileSize = int64(5 * 1024 * 1024) // 5 MB
+	maxFileSize = int64(5 * 1024 * 1024)
 	robotsRules = make(map[string]bool)
 )
 
@@ -41,7 +41,6 @@ func main() {
 	startURL := os.Args[1]
 	depth := atoi(os.Args[2])
 
-	// Путь для сохранения
 	repoPath, err := os.Getwd()
 	if err != nil {
 		fmt.Println("Error getting working directory:", err)
@@ -50,7 +49,6 @@ func main() {
 	basePath = filepath.Join(repoPath, "mirror")
 	fmt.Println("Сохраняю сайт в папку:", basePath)
 
-	// Создаём папку mirror
 	if err := os.MkdirAll(basePath, 0755); err != nil {
 		fmt.Println("Ошибка создания папки:", err)
 		return
@@ -68,17 +66,14 @@ func main() {
 	jobs := make(chan Job, 100)
 	var wg sync.WaitGroup
 
-	// worker pool
 	numWorkers := 5
 	for i := 0; i < numWorkers; i++ {
 		go worker(jobs, &wg)
 	}
 
-	// стартовое задание
 	wg.Add(1)
 	jobs <- Job{URL: startURL, Depth: depth}
 
-	// ждём выполнения всех заданий
 	wg.Wait()
 	close(jobs)
 
@@ -193,7 +188,6 @@ func downloadFile(rawurl string) (string, bool) {
 		return "", false
 	}
 
-	// Ограничение размера
 	reader := io.LimitReader(resp.Body, maxFileSize)
 
 	u, _ := url.Parse(rawurl)
